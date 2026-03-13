@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Perfil de Matheus - Desenvolvedor e links para portfólio"
+    />
+    <title>Rocketseat-Projeto</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container-main">
+      <section class="profile">
+        <div class="Avatar">
+          <img
+            class="com"
+            src="Imagens/20260312_1742_image.png"
+            alt="Foto de perfil de Matheus no modo claro"
+          />
+          <img
+            class="sem"
+            src="Imagens/IMG_20241220_101337.jpg"
+            alt="Foto de perfil de Matheus no modo escuro"
+          />
+        </div>
+        <p>@matheus_9882</p>
+      </section>
+      <button
+        class="btn-trocarModo"
+        aria-label="Alternar entre modo claro e escuro"
+      >
+        <div class="icone">
+          <img
+            class="icone-sol"
+            src="Imagens/Sun.svg"
+            alt="Ícone do sol para modo claro"
+          />
+          <img
+            class="icone-lua"
+            src="Imagens/MoonStars.svg"
+            alt="Ícone da lua para modo escuro"
+          />
+        </div>
+      </button>
+      <ul class="container">
+        <li class="box">
+          <a href="https://www.rocketseat.com.br/nlw">Inscreva-se no NLW</a>
+        </li>
+        <li class="box"><a href="./ebook.html">Baixe meu e-book</a></li>
+        <li class="box"><a href="./portfolio.html">Veja meu portfólio</a></li>
+        <li class="box">
+          <a href="https://www.rocketseat.com.br/explorer"
+            >Conheça o Explorer</a
+          >
+        </li>
+      </ul>
+      <nav class="redes">
+        <li>
+          <a href="https://github.com/matheus9882"
+            ><img src="Imagens/github.svg" alt="Link para o GitHub de Matheus"
+          /></a>
+        </li>
+        <li>
+          <a href="https://instagram.com/matheus9882"
+            ><img
+              src="Imagens/instagram.svg"
+              alt="Link para o Instagram de Matheus"
+          /></a>
+        </li>
+        <li>
+          <a href="https://linkedin.com/in/matheus9882"
+            ><img
+              src="Imagens/linkedln.svg"
+              alt="Link para o LinkedIn de Matheus"
+          /></a>
+        </li>
+        <li>
+          <a href="https://youtube.com/@matheus9882"
+            ><img
+              src="Imagens/youtube.svg"
+              alt="Link para o YouTube de Matheus"
+          /></a>
+        </li>
+      </nav>
+    </main>
+    <script>
+      const btnTrocarModo = document.querySelector(".btn-trocarModo")
+      const html = document.documentElement
+
+      // Carregar preferência salva
+      const savedTheme = localStorage.getItem("theme")
+      if (savedTheme === "dark") {
+        html.setAttribute("data-theme", "dark")
+      }
+
+      btnTrocarModo.addEventListener("click", () => {
+        // Verifica se já está dark, se sim, remove, senão, adiciona
+        if (html.hasAttribute("data-theme")) {
+          html.removeAttribute("data-theme")
+          localStorage.removeItem("theme")
+        } else {
+          html.setAttribute("data-theme", "dark")
+          localStorage.setItem("theme", "dark")
+        }
+      })
+    </script>
+  </body>
+</html>

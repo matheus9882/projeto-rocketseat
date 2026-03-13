@@ -1,0 +1,90 @@
+:root {
+  /* Tipografia */
+  --font-family: "Inter", sans-serif;
+
+  /* Modo Claro (Default) */
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --surface-color: #f2f2f2;
+  --highlight-color: #e6e6e6;
+  --secondary-text: #808080;
+}
+
+/* Modo Escuro */
+[data-theme="dark"] {
+  --bg-color: #000000;
+  --text-color: #ffffff;
+  --surface-color: #1a1a1a;
+  --highlight-color: #333333;
+  --secondary-text: #808080;
+}
+[data-theme="dark"] .icone {
+  right: 36px;
+  transition: all 0.3s ease;
+}
+.icone-lua {
+  display: none;
+}
+[data-theme="dark"] .icone-sol {
+  display: none;
+}
+[data-theme="dark"] .Avatar {
+  right: -2px;
+  transition: all 0.3s ease;
+}
+.sem {
+  display: none;
+}
+[data-theme="dark"] .com {
+  display: none;
+}
+[data-theme="dark"] .sem {
+  display: block;
+}
+[data-theme="dark"] .redes img {
+  filter: brightness(0) invert(1);
+}
+[data-theme="dark"] .btn-trocarModo {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid #ffffff;
+}
+[data-theme="dark"] .icone-lua {
+  display: block;
+}
+[data-theme="dark"] body {
+  background: url("Imagens/bg-desktop.jpg") no-repeat center center fixed;
+}
+
+@media (max-width: 400px) {
+  [data-theme="dark"] body {
+    background: url("Imagens/bg-mobile.jpg") no-repeat center center fixed;
+  }
+}
+[data-theme="dark"] .box {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid #ffffff;
+}
+/* Utilitários Básicos */
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+.text-bold {
+  font-weight: 600;
+}
+.text-regular {
+  font-weight: 400;
+}
+
+.bg-surface {
+  background-color: var(--surface-color);
+}
+.bg-highlight {
+  background-color: var(--highlight-color);
+}
+.text-secondary {
+  color: var(--secondary-text);
+}
